@@ -36,7 +36,7 @@ type EditableTextProps = {
 
 const EditPen = styled.img`
   width: 14px;
-  : hover {
+  :hover {
     cursor: pointer;
   }
 `;

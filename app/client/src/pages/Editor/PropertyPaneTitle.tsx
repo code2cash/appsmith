@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   align-items: center;
   display: grid;
   width: 100%;
-  grid-template-columns: 146px 25px 25px 25px 25px;
+  grid-template-columns: 1fr 25px 25px 25px 25px;
   justify-items: center;
   align-items: center;
   justify-content: stretch;
@@ -49,11 +49,10 @@ const Wrapper = styled.div`
 `;
 
 const NameWrapper = styled.div`
-  max-width: 100%;
-  display: flex;
-  flex: 0 0 auto;
-  display: grid;
-  grid-template-columns: 126px 20px;
+  min-width: 100%;
+  padding-right: 25px;
+  max-width: 134px;
+
   &&&&&&& > * {
     overflow: hidden;
   }
