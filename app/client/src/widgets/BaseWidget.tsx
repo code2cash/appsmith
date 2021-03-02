@@ -34,6 +34,7 @@ import {
   WidgetEvaluatedProps,
 } from "../utils/DynamicBindingUtils";
 import { BatchPropertyUpdatePayload } from "actions/controlActions";
+import widgetCommentsWrapper from "components/ads/Comments/widgetCommentsWrapper";
 
 /***
  * BaseWidget
@@ -227,6 +228,7 @@ abstract class BaseWidget<
           content = this.makeResizable(content);
           content = this.showWidgetName(content);
           content = this.makeDraggable(content);
+          content = widgetCommentsWrapper(content, this.props);
           content = this.makePositioned(content);
         }
         return content;
@@ -237,6 +239,7 @@ abstract class BaseWidget<
         if (this.props.isVisible) {
           content = this.addErrorBoundary(content);
           if (!this.props.detachFromLayout) {
+            content = widgetCommentsWrapper(content, this.props);
             content = this.makePositioned(content);
           }
           return content;
